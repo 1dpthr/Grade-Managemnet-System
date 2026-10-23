@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    min-width: 320px;
+    background: #f4f7fb;
+    font-family: 'DM Sans', sans-serif;
+    color: #17213a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  select {
+    cursor: pointer;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+}
+
+@layer components {
+  .card {
+    overflow: hidden;
+    border: 1px solid #e4e8ef;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 3px 12px rgba(25, 38, 69, 0.025);
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid #e9ecf1;
+    padding: 1rem 1.25rem;
+  }
+
+  .section-heading h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #29334a;
+  }
+
+  .section-heading p {
+    margin-top: 0.125rem;
+    font-size: 0.7rem;
+    color: #929bad;
+  }
+
+  .section-icon {
+    display: flex;
+    height: 2.125rem;
+    width: 2.125rem;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.65rem;
+    background: #eeeeff;
+    color: #5b5ce2;
+  }
+
+  .section-icon svg {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .field > span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #606b80;
+  }
+
+  .field input,
+  .field select {
+    height: 2.75rem;
+    width: 100%;
+    appearance: none;
+    border: 1px solid #dfe3ea;
+    border-radius: 0.75rem;
+    background: #fbfcfd;
+    padding: 0 0.875rem;
+    font-size: 0.85rem;
+    color: #2f3a50;
+    outline: none;
+    transition: 160ms ease;
+  }
+
+  .field input::placeholder {
+    color: #adb4c1;
+  }
+
+  .field input:focus,
+  .field select:focus,
+  .subject-field input:focus {
+    border-color: #8586eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(91, 92, 226, 0.09);
+  }
+
+  .subject-field {
+    position: relative;
+    display: block;
+    border: 1px solid #e4e7ed;
+    border-radius: 0.875rem;
+    background: #fcfcfd;
+    padding: 0.875rem;
+  }
+
+  .subject-badge {
+    display: inline-flex;
+    height: 1.75rem;
+    width: 1.75rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    background: #ececff;
+    color: #5b5ce2;
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+
+  .subject-badge.science {
+    background: #e5f8f1;
+    color: #188d69;
+  }
+
+  .subject-badge.english {
+    background: #fff1e5;
+    color: #d7762d;
+  }
+
+  .subject-field input {
+    height: 2.6rem;
+    width: 100%;
+    border: 1px solid #dfe3ea;
+    border-radius: 0.65rem;
+    background: white;
+    padding: 0 3.25rem 0 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    transition: 160ms ease;
+  }
+
+  table th {
+    padding: 0.75rem 1rem;
+  }
+
+  table th:first-child,
+  table td:first-child {
+    padding-left: 1.5rem;
+  }
+
+  table th:last-child,
+  table td:last-child {
+    padding-right: 1.5rem;
+  }
+
+  table td {
+    border-top: 1px solid #edf0f4;
+    padding: 0.9rem 1rem;
+    font-size: 0.78rem;
+    color: #566176;
+  }
+
+  table tbody tr {
+    transition: background 140ms ease;
+  }
+
+  table tbody tr:hover {
+    background: #fafaff;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+
+  .status-pill.passed {
+    background: #e9f8f1;
+    color: #16805d;
+  }
+
+  .status-pill.failed {
+    background: #fff0ef;
+    color: #d04d4d;
+  }
+}

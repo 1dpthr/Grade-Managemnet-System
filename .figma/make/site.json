@@ -1,0 +1,10 @@
+{
+  "description": "Manage student grades effortlessly with a user-friendly dashboard that allows for easy entry, calculation, and viewing of academic records.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
